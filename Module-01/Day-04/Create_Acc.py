@@ -1,16 +1,5 @@
-# inheritance, polymorrhism, abstraction concept
-# class Animal:
-#     def speak(self):
-#         print("Animals make a sound")
-        
-# class Dog(Animal):
-#     pass
-    
-# Dog = Dog()
-# Dog.speak()
-    
 class Account:
-    def _init_(self, owner, account_number, balance=0):
+    def __init__(self, owner, account_number, balance):
         self.owner = owner
         self.account_number = account_number
         self.__balance = balance
@@ -68,24 +57,6 @@ account2.deposit(-200)    # Invalid deposit
 
 # Display final account information
 account1.display_account()
-account2.display_account()    
-
-class SavingAccount(Account):
-    def __init__(self,owner, account_number, balance, rate):
-     super().__init__(self, owner, account_number, balance)
-     self.rate = rate
-     def add_interest(self):
-         interest = self.balance * self.rate
-         self.balance += interest
-         print("interest rae = {self.rate * 100% }")
-
-
-      
-
-
-
-
-
-
+account2.display_account()
 
 

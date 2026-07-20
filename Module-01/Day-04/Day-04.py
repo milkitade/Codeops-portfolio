@@ -1,4 +1,4 @@
-# OOP , class , object, constructer,and encapsulation
+# # OOP , class , object, constructer,and encapsulation
 
 
 class Person:
@@ -10,63 +10,36 @@ maqa = Person("milki", 22)
 print(maqa.name, maqa.age)
 
 
+# create a class and object
+# Account creation 
+
 class Account:
-    def init(self, owner, account_number, balance=0):
+    def __init__(self, owner, balance):
         self.owner = owner
-        self.account_number = account_number
-        self.__balance = balance
+        self.balance = balance
+    def NewAcc(self, acc):
+        self.balance += acc
+        print(f" Dear {self.owner} your account is Successfully created with : {self.balance} ETB")
+    def NewAc(self, bcc):
+        self.balance += bcc
+        print(f" Dear {self.owner} your account is Successfully created with : {self.balance} ETB")
 
-    @property
-    def balance(self):
-        """Return the account balance (read-only)."""
-        return self.__balance
-
-    def deposit(self, amount):
-        """Deposit money into the account."""
-        if amount <= 0:
-            print("Error: Deposit amount must be greater than zero.")
-            return
-
-        self.__balance += amount
-        print(f"Successfully deposited {amount} Birr.")
-
-    def withdraw(self, amount):
-        """Withdraw money from the account."""
-        if amount <= 0:
-            print("Error: Withdrawal amount must be greater than zero.")
-            return
-
-        if amount > self.__balance:
-            print("Error: Insufficient balance.")
-            return
-
-        self.__balance -= amount
-        print(f"Successfully withdrew {amount} Birr.")
-
-    def display_account(self):
-        """Display account information."""
-        print("\n----------------------------")
-        print(f"Owner          : {self.owner}")
-        print(f"Account Number : {self.account_number}")
-        print(f"Balance        : {self.balance} Birr")
-        print("----------------------------")
+Cus1 = Account("Sabaaf", 50)
+Cus1.NewAcc(20)
+Cus2 = Account("Obsaa", 50)
+Cus2.NewAc(10)
 
 
-# ----------------------------
-# Testing the Account Class
-# ----------------------------
 
-account1 = Account("Milki Tadesse", "ACC1001", 5000)
-account2 = Account("Abdi Ali", "ACC1002", 3000)
+# Encapsulation concept,,, encapsulation means the process of protecting data internal class
 
-# Transactions
-account1.deposit(1500)
-account1.withdraw(2000)
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.__age = age
 
-account2.deposit(700)
-account2.withdraw(5000)   # Insufficient balance
-account2.deposit(-200)    # Invalid deposit
+  def get_age(self):
+    return self.__age
 
-# Display final account information
-account1.display_account()
-account2.display_account()
+p1 = Person("Tobias", 25)
+print(p1.get_age())
