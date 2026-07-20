@@ -1,14 +1,3 @@
-# inheritance, polymorrhism, abstraction concept
-# class Animal:
-#     def speak(self):
-#         print("Animals make a sound")
-        
-# class Dog(Animal):
-#     pass
-    
-# Dog = Dog()
-# Dog.speak()
-
 class Account:
     # Sarara gadii lama lama (__init__) ta'uu qaba
     def __init__(self, acc_no, name, balance):
@@ -75,10 +64,3 @@ accounts = [a1, a2]
 
 for account in accounts:
     account.statement()
-
-
-
-
-
-
-
