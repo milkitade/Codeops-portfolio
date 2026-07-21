@@ -1,51 +1,51 @@
-# class Account:
-#     def init(self, name, account_number, balance):
-#         self.name = name
-#         self.account_number = account_number
-#         self.balance = balance
+class Account:
+    def __init__(self, name, account_number, balance):
+        self.name = name
+        self.account_number = account_number
+        self.balance = balance
 
 
-# accounts = []
+accounts = []
 
-# while True:
-#     print("\n===== Account Menu =====")
-#     print("1. Add Account")
-#     print("2. Search Account")
-#     print("3. Exit")
+while True:
+    print("\n===== Account Menu =====")
+    print("1. Add Account")
+    print("2. Search Account")
+    print("3. Exit")
 
-#     choice = input("Enter your choice: ")
+    choice = input("Enter your choice: ")
 
-#     if choice == "1":
-#         name = input("Enter Name: ")
-#         account_number = input("Enter Account Number: ")
-#         balance = float(input("Enter Balance: "))
+    if choice == "1":
+        name = input("Enter Name: ")
+        account_number = input("Enter Account Number: ")
+        balance = float(input("Enter Balance: "))
 
-#         acc = Account(name, account_number, balance)
-#         accounts.append(acc)
+        acc = Account(name, account_number, balance)
+        accounts.append(acc)
 
-#         print("Account Added Successfully!")
+        print("Account Added Successfully!")
 
-#     elif choice == "2":
-#         search = input("Enter Account Number: ")
+    elif choice == "2":
+        search = input("Enter Account Number: ")
 
-#         found = False
-#         for acc in accounts:
-#             if acc.account_number == search:
-#                 print("\n----- Account Information -----")
-#                 print("Name:", acc.name)
-#                 print("Account Number:", acc.account_number)
-#                 print("Balance:", acc.balance)
-#                 found = True
-#                 break
+        found = False
+        for acc in accounts:
+            if acc.account_number == search:
+                print("\n----- Account Information -----")
+                print("Name:", acc.name)
+                print("Account Number:", acc.account_number)
+                print("Balance:", acc.balance)
+                found = True
+                break
 
-#         if not found:
-#             print("Account Not Found!")
+        if not found:
+            print("Account Not Found!")
 
-#     elif choice == "3":
-#         print("Thank You!")
-#         break
-#     else:
-#         print("ivalid choice")
+    elif choice == "3":
+        print("Thank You!")
+        break
+    else:
+        print("ivalid choice")
 
 
 
@@ -61,18 +61,18 @@
 #             h = mid - 1
 #         return -1
 
-numbers = [12, 45, 7, 89, 23]
+# numbers = [12, 45, 7, 89, 23]
 
-search = int(input("Enter number: "))
+# search = int(input("Enter number: "))
 
-found = False
-for i in range(len(numbers)):
-    if numbers[i] == search:
-        print("Found at index", i)
-        found = True
-        break
+# found = False
+# for i in range(len(numbers)):
+#     if numbers[i] == search:
+#         print("Found at index", i)
+#         found = True
+#         break
 
-if not found:
-    print("Number not found")
+# if not found:
+#     print("Number not found")
     
         
