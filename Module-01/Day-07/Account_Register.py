@@ -48,31 +48,40 @@ while True:
         print("ivalid choice")
 
 
-
-# def binery_search(items, target):
-#     l, h = 10, len(items) - 1
-#     while l <= h:
-#         mid = (l + h) // 2
-#         if items[mid] == target:
-#             return mid
-#         elif items[mid] < target:
-#             l = mid + 1
-#         else:
-#             h = mid - 1
-#         return -1
-
-# numbers = [12, 45, 7, 89, 23]
-
-# search = int(input("Enter number: "))
-
-# found = False
-# for i in range(len(numbers)):
-#     if numbers[i] == search:
-#         print("Found at index", i)
-#         found = True
-#         break
-
-# if not found:
-#     print("Number not found")
-    
         
+def linear_search(my_list, target):
+    for i in range(len(my_list)):
+        if my_list[i] == target:
+            return i  # Found! Returns the index (iddoosaa)
+    return -1  # Not found
+
+
+
+num_list = [5, 3, 8, 2, 9]
+target = 8
+
+print(linear_search(num_list, target))  # Output: 2
+
+
+def binary_search(sorted_list, target):
+    low = 0
+    high = len(sorted_list) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+
+        if sorted_list[mid] == target:
+            return mid  # Found!
+        elif sorted_list[mid] < target:
+            low = mid + 1  # Search right half
+        else:
+            high = mid - 1  # Search left half
+
+    return -1  # Not found
+
+
+# Akkaataa itti hojjetu:
+ordered_list = [2, 3, 5, 8, 9]  # Must be sorted!
+target = 8
+
+print(binary_search(ordered_list, target))  # Output: 3
