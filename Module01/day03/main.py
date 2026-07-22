@@ -14,6 +14,13 @@ print(cities)
 people = ("kena","Bona","cala", "kena")
 print(people)
 
+# dictionery 
+person = {
+    "name":"milki",
+    "age" : "24",
+}
+
+print(person)
 
 
 # # reading files
