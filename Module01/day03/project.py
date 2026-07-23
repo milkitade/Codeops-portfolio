@@ -1,4 +1,7 @@
 # reading files
+with open("customer.txt" "w") as file:
+    file.write("heloo class")
+
 with open("customer.txt") as f:
     for line in f:
         print(line.strip())
@@ -7,6 +10,9 @@ with open("customer.txt") as f:
 # transaction_report.py
 
 transactions = {}
+
+with open("transactions.txt" "w") as file:
+    file.write("heloo class")
 
 try:
     # Read the transaction file

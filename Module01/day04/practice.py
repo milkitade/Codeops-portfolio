@@ -1,35 +1,73 @@
-class Acc:
-    def __init__(self, owner, account_number, balance):
-        self.owner = owner
-        self.account_number = account_number
-        self.balance = balance
+class Book:
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
 
-# Tarree herregoota uumaman keessatti kuusnu
-accounts_list = []
+    def describe(self):
+        print(f"'{self.title}' by {self.author}, {self.pages} pages")
 
-while True:
-    print("\n====== MENU ======")
-    print("1. Create New Account")
-    print("2. Exit")
-    
-    # Gidduu loopii keessatti gaafachuu qaba
-    choice = input("Maal barbaadde? (1 ykn 2): ")
+# Create two books
+book1 = Book("Python Programming", "John Smith", 300)
+book2 = Book("Web Development", "David Lee", 250)
 
-    if choice == "1":
-        name = input("Please enter your name: ")
-        account_number = input("Please enter your Account Number: ")
-        balance = input("Please enter your balance: ")
+book1.describe()
+book2.describe()
+print("\n----------------------")
 
-        # Oobjektii uumuu
-        Ac = Acc(name, account_number, balance)
-        
-        # List gubbaa jiru keessatti kuusuu
-        accounts_list.append(Ac)
-        print(f"Account uumameera: {Ac.owner} :{Ac.account_number} - {Ac.balance} Birr")
+class Product:
+    def __init__(self, name, price, quantity): # Fixed __init__ syntax
+        self.name = name
+        self.price = price
+        self.__quantity = quantity # private attribute
 
-    elif choice == "2":
-        print("Programichi cufameera!")
-        break  # Loop sana dhaabuuf
-        
-    else:
-        print("Maaloo 1 ykn 2 qofa filadhu!")
+    # Getter for quantity
+    @property
+    def quantity(self): 
+        return self.__quantity
+
+    # Setter for quantity
+    @quantity.setter
+    def quantity(self, value):
+        if value >= 0:
+            self.__quantity = value
+        else:
+            print("Quantity cannot be negative!")
+
+    # Restock product
+    def restock(self, n):
+        self.__quantity += n
+
+    # Sell product
+    def sell(self, n):
+        if n <= self.__quantity:
+            self.__quantity -= n
+        else:
+            print("Not enough stock available!")
+
+# 5. Prove independence
+product1 = Product("Laptop", 50000, 10)
+product2 = Product("Phone", 20000, 20)
+product3 = Product("Tablet", 15000, 15)
+
+print("Before selling:")
+print(product1.name, product1.quantity)
+print(product2.name, product2.quantity)
+print(product3.name, product3.quantity)
+
+# Change only product1
+product1.sell(5)
+
+print("\nAfter selling 5 laptops:")
+print(product1.name, product1.quantity)
+print(product2.name, product2.quantity)
+print(product3.name, product3.quantity)
+
+# Testing restock
+product2.restock(10)
+print("\nAfter restocking phones:")
+print(product2.name, product2.quantity)
+
+# Testing setter validation
+product3.quantity = -5 
+print(product3.name, product3.quantity)

@@ -1,0 +1,38 @@
+# inventory.py
+
+# Read stock from file
+stock = {}
+
+try:
+    with open("stock.txt", "r") as file:
+        for line in file:
+            item, quantity = line.strip().split(",")
+            stock[item] = int(quantity)
+except FileNotFoundError:
+    print("stock.txt not found. Starting with empty inventory.")
+
+# Function to update quantity
+def update_stock(item, amount):
+    if item in stock:
+        stock[item] += amount
+    else:
+        stock[item] = amount
+
+# Get user input
+item = input("Enter item name: ")
+amount = int(input("Enter quantity to add (+) or remove (-): "))
+
+update_stock(item, amount)
+
+# Print low-stock items
+print("\nLow Stock Items:")
+for item, quantity in stock.items():
+    if quantity < 10:
+        print(item, quantity)
+
+# Save updated stock back to file
+with open("stock.txt", "w") as file:
+    for item, quantity in stock.items():
+        file.write(f"{item},{quantity}\n")
+
+print("\nStock updated successfully.")

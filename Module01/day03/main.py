@@ -1,101 +1,56 @@
-# python collection , list, Tuple, set, Dictionary
+# # python collection , list, Tuple, set, Dictionary
 
-#list 
-cities = ["Finfinnee", "Amboo", "Jimmaa", "Wollega"]
+# #list 
+# cities = ["Finfinnee", "Amboo", "Jimmaa", "Wollega"]
 
-cities.insert(1,"Dire Dewa")
-cities.append("Adamaa")
-cities.sort()
-print(cities)
-
-
-# Tuple
-
-people = ("kena","Bona","cala", "kena")
-print(people)
-
-# dictionery 
-person = {
-    "name":"milki",
-    "age" : "24",
-}
-
-print(person)
+# cities.insert(1,"Dire Dewa")
+# cities.append("Adamaa")
+# cities.sort()
+# print(cities)
 
 
-# # reading files
-# with open("customer.txt") as f:
-#     for line in f:
-#         print(line.strip())
+# # Tuple
+
+# people = ("kena","Bona","cala", "kena")
+# print(people)
+
+# # dictionery 
+# person = {
+#     "name":"milki",
+#     "age" : "24",
+# }
+# print(person)
 
 
 
 
-# transaction_report.py
+#     # Module and imports
 
-# transactions = {}
+# # we can use module in 4 ways like import whole module,, import specific attribute ,,,Import with an Alias,,,
+# #  Import Specific Attributes with an Alias
 
-# try:
-#     # Read the transaction file
-#     with open("transactions.txt", "r") as file:
-#         for line in file:
-#             line = line.strip()
+# # import whole module
+# import math
 
-#             if not line:
-#                 continue
+# print(math.sqrt(25))
 
-#             name, amount = line.split(",")
-#             amount = float(amount)
+# # import specific attribute
+# from math import pi, sqrt
+# print(sqrt(16))
+# print(pi)
 
-#             if name in transactions:
-#                 transactions[name] += amount
-#             else:
-#                 transactions[name] = amount
+# # import with an alias 
 
-#     # Sort by highest total spend
-#     sorted_transactions = sorted(
-#         transactions.items(),
-#         key=lambda x: x[1],
-#         reverse=True
-#     )
+# import random as rdm
 
-#     print("=== Transaction Report ===")
+# print(rdm.randrange(1, 10))
 
-#     # Write the report to a file
-#     with open("report.txt", "w") as report:
-#         for name, total in sorted_transactions:
-#             output = f"{name}: {total:.2f}"
-#             print(output)
-#             report.write(output + "\n")
+# #  Import Specific Attributes with an Alias
+# from os.path import join as join_path
 
-#     print("\nReport saved to report.txt")
+# print(join_path("folder", "file.txt"))
+with open("text.txt", "w") as file:
+    file.write("hello milki tadesse akkam jirta")
 
-# except FileNotFoundError:
-#     print("Error: transactions.txt file not found.")
-
-
-    # Module and imports
-
-# we can use module in 4 ways like import whole module,, import specific attribute ,,,Import with an Alias,,,
-#  Import Specific Attributes with an Alias
-
-# import whole module
-import math
-
-print(math.sqrt(25))
-
-# import specific attribute
-from math import pi, sqrt
-print(sqrt(16))
-print(pi)
-
-# import with an alias 
-
-import random as rdm
-
-print(rdm.randrange(1, 10))
-
-#  Import Specific Attributes with an Alias
-from os.path import join as join_path
-
-print(join_path("folder", "file.txt"))
+with open("text.txt", "r") as file:
+    print(file.read())
