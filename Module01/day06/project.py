@@ -50,7 +50,7 @@ class AccountFactory:
             raise ValueError("Unknown account type")
 
 
-# Main Program
+
 sms = SMSAlert()
 
 account = AccountFactory.create("savings", "Abebe", 1000)
