@@ -1,5 +1,5 @@
 class Account:
-    # Sarara gadii lama lama (__init__) ta'uu qaba
+
     def __init__(self, acc_no, name, balance):
         self.acc_no = acc_no
         self.name = name
