@@ -1,28 +1,28 @@
-# # buble sort
-# mylist = [64, 34, 25, 12, 22, 11, 90, 5]
+# buble sort
+mylist = [64, 34, 25, 12, 22, 11, 90, 5]
 
-# n = len(mylist)
-# for i in range(n-1):
-#   for j in range(n-i-1):
-#     if mylist[j] > mylist[j+1]:
-#       mylist[j], mylist[j+1] = mylist[j+1], mylist[j]
+n = len(mylist)
+for i in range(n-1):
+  for j in range(n-i-1):
+    if mylist[j] > mylist[j+1]:
+      mylist[j], mylist[j+1] = mylist[j+1], mylist[j]
 
-# print(mylist) 
+print(mylist) 
 
-# # selection sort
+# selection sort
 
-# list = [64, 34, 25, 5, 22, 11, 90, 12]
+list = [64, 34, 25, 5, 22, 11, 90, 12]
 
-# n = len(list)
-# for i in range(n-1):
-#   min_index = i
-#   for j in range(i+1, n):
-#      if mylist[j] < list[min_index]:
-#        min_index = j
-#   min_value = list.pop(min_index)
-#   list.insert(i, min_value)
+n = len(list)
+for i in range(n-1):
+  min_index = i
+  for j in range(i+1, n):
+     if mylist[j] < list[min_index]:
+       min_index = j
+  min_value = list.pop(min_index)
+  list.insert(i, min_value)
 
-# print(list)
+print(list)
 
 
 # insertion sort
