@@ -1,56 +1,56 @@
-# # python collection , list, Tuple, set, Dictionary
+# python collection , list, Tuple, set, Dictionary
 
-# #list 
-# cities = ["Finfinnee", "Amboo", "Jimmaa", "Wollega"]
+#list 
+cities = ["Finfinnee", "Amboo", "Jimmaa", "Wollega"]
 
-# cities.insert(1,"Dire Dewa")
-# cities.append("Adamaa")
-# cities.sort()
-# print(cities)
-
-
-# # Tuple
-
-# people = ("kena","Bona","cala", "kena")
-# print(people)
-
-# # dictionery 
-# person = {
-#     "name":"milki",
-#     "age" : "24",
-# }
-# print(person)
+cities.insert(1,"Dire Dewa")
+cities.append("Adamaa")
+cities.sort()
+print(cities)
 
 
+# Tuple
+
+people = ("kena","Bona","cala", "kena")
+print(people)
+
+# dictionery 
+person = {
+    "name":"milki",
+    "age" : "24",
+}
+print(person)
 
 
-#     # Module and imports
 
-# # we can use module in 4 ways like import whole module,, import specific attribute ,,,Import with an Alias,,,
-# #  Import Specific Attributes with an Alias
 
-# # import whole module
-# import math
+    # Module and imports
 
-# print(math.sqrt(25))
+# we can use module in 4 ways like import whole module,, import specific attribute ,,,Import with an Alias,,,
+#  Import Specific Attributes with an Alias
 
-# # import specific attribute
-# from math import pi, sqrt
-# print(sqrt(16))
-# print(pi)
+# import whole module
+import math
 
-# # import with an alias 
+print(math.sqrt(25))
 
-# import random as rdm
+# import specific attribute
+from math import pi, sqrt
+print(sqrt(16))
+print(pi)
 
-# print(rdm.randrange(1, 10))
+# import with an alias 
 
-# #  Import Specific Attributes with an Alias
-# from os.path import join as join_path
+import random as rdm
 
-# print(join_path("folder", "file.txt"))
-with open("text.txt", "w") as file:
-    file.write("hello milki tadesse akkam jirta")
+print(rdm.randrange(1, 10))
 
-with open("text.txt", "r") as file:
-    print(file.read())
+#  Import Specific Attributes with an Alias
+from os.path import join as join_path
+
+print(join_path("folder", "file.txt"))
+
+
+
+
+

@@ -52,7 +52,7 @@ while True:
 def linear_search(my_list, target):
     for i in range(len(my_list)):
         if my_list[i] == target:
-            return i  # Found! Returns the index (iddoosaa)
+            return i  # Found! Returns the index ()
     return -1  # Not found
 
 
@@ -80,7 +80,7 @@ def binary_search(sorted_list, target):
     return -1  # Not found
 
 
-# Akkaataa itti hojjetu:
+
 ordered_list = [2, 3, 5, 8, 9]  # Must be sorted!
 target = 8
 
