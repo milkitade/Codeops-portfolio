@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+}
+
+/* 1. Grid Page Skeleton */
+.page-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* Grid Areas Assigning */
+.main-header { grid-area: header; }
+.sidebar     { grid-area: sidebar; }
+.main-content { grid-area: main; }
+.main-footer { grid-area: footer; }
+
+/* 2. Sticky Element (Header stays on top during scroll) */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #5c0632; /* CBE Brand Purple */
+  color: white;
+  padding: 15px 20px;
+  /* Flexbox Component */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+  color: #bdc3c7;
+  text-decoration: none;
+}
+
+/* Main Content & Toolbar (Flexbox) */
+.main-content {
+  padding: 20px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-action {
+  background-color: #f39c12;
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* 3. Responsive Card Grid using auto-fit and minmax */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Card & 4. Absolutely Positioned Element (Badge) */
+.stat-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative; /* Relative Parent Anchor */
+}
+
+.badge {
+  position: absolute; /* Absolute Positioned Badge */
+  top: 10px;
+  right: 10px;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+/* Footer Styling */
+.main-footer {
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* 5. Media Query to Collapse Layout into One Column on Mobile */
+@media (max-width: 768px) {
+  .page-container {
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+  
+  .main-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

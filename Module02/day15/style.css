@@ -1,0 +1,12 @@
+.menu{
+   display: flex;
+   justify-content: space-around;
+   padding: 5px;
+   align-items: end;
+   background-color: black;
+  
+}
+
+.box{
+    color: white;
+}

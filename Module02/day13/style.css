@@ -1,0 +1,101 @@
+/* CSS variables */
+:root {
+    --blue: hsl(212, 68%, 33%);
+    --light: hsl(210, 30%, 96%);
+    --white: white;
+    --text: #333;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--light);
+    color: var(--text);
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+
+
+.card {
+    width: 500px;
+
+    background-color: var(--white);
+
+    padding: 30px;
+    margin: 20px;
+
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+}
+
+
+
+.card::before {
+    content: "☕";
+    font-size: 30px;
+}
+
+
+
+h1 {
+    color: var(--blue);
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+
+.card__tagline {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.card__description {
+    line-height: 1.6;
+}
+
+
+
+.button {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background-color: var(--blue);
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+}
+
+
+
+.button:hover {
+    background-color: hsl(212, 68%, 40%);
+}
+
+
+
+.button:focus {
+    outline: 2px solid black;
+}
