@@ -1,12 +1,59 @@
-.menu{
-   display: flex;
-   justify-content: space-around;
-   padding: 5px;
-   align-items: end;
-   background-color: black;
-  
+body{
+    font-family: Arial;
+    margin:0;
 }
 
-.box{
-    color: white;
+nav{
+    background: brown;
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:10px;
+}
+
+.hero{
+    background:beige;
+    text-align:center;
+    padding:60px;
+}
+
+.hero h1{
+    font-size:clamp(30px,5vw,50px);
+}
+
+button{
+    background:brown;
+    color:white;
+    padding:10px 20px;
+    border:none;
+}
+
+.card{
+    border:1px solid gray;
+    margin:10px;
+    padding:15px;
+}
+
+form{
+    margin:20px;
+}
+
+input{
+    padding:8px;
+    width:200px;
+}
+
+footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
